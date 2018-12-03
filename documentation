@@ -1,0 +1,17 @@
+http://localhost:3000/url - Loads the app and initializes a new deck
+ 
+http://localhost:3000/shuffle - Randomize all the cards remaining in the deck and that are in the discard pile.
+ 
+http://localhost:3000/cut/26 - Specifies a location where to split the deck of cards into two and puts the bottom half on top of the top half.
+Replace the integer at the end of the request to select a specific cut point. 26 is the default.
+ 
+http://localhost:3000/deal - Deals 1 card from the top of the deck and reutrns the current hand
+  
+http://localhost:3000/discard/1 - Specifies a dealt card to discard and sends to the discard pile. Replace the integer at the end of the request to specify card to be discarded.
+Card numbering is '1' based, not 'zero' based. 1 is the default.
+   
+http://localhost:3000/order - Oreder all the remaining cards in the deck into the default order. 
+Cards in the discard pile remain in the discard pile in the order they were discarded.
+    
+http://localhost:3000/rebuild - Puts the deck back into the default sort order with an empty discard pile
+and all other parameters are reset.
